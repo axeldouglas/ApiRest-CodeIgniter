@@ -1,12 +1,12 @@
 # ApiRest-CodeIgniter
 Desenvolvimento de uma aplicação de Tasks utilizando CodeIgniter como RestServer.
 
-## Requirements
+## Requerimentos
 
 1. PHP 5.4 ou superior
 2. CodeIgniter 3.0+
 
-_Note: configurações utilizando PHP 7 apresenta erros _
+_Note: configurações utilizando PHP 7 apresenta erros_
 
 ## Documentação e Fontes
 * [CodeIgniter](https://codeigniter.com/)
