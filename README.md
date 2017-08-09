@@ -6,7 +6,7 @@ Desenvolvimento de uma aplicação de Tasks utilizando CodeIgniter como RestServ
 1. PHP 5.4 ou superior
 2. CodeIgniter 3.0+
 
-_Note: configurações utilizando PHP 7 apresenta erros_
+_Nota: configurações utilizando PHP 7 apresentam erros_
 
 ## Documentação e Fontes
 * [CodeIgniter](https://codeigniter.com/)
