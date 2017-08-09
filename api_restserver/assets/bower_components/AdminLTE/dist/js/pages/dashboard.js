@@ -58,33 +58,41 @@ $(function () {
             cache: false,
             contentType: false,
             processData: false,
-            success: function(response){
-                $.each(response.data, function(key,val){
+            success: function(response) {
 
-                    if (val.status == 0) {
-                        check = 'done';
-                    } else {
-                        check = '';
-                    }
+                if(response !== undefined) {
+            
+                    $.each(response.data, function(key,val){
 
-                    item += '<li class="'+ check +'" >'+
-                                '<span class="handle">'+
-                                    '<i class="fa fa-ellipsis-v"></i> '+
-                                    '<i class="fa fa-ellipsis-v"></i> '+
-                                '</span>'+
-                                '<input type="checkbox" value="'+ val.status +'" name="status" class="check-item" data-item="'+ val.id +'">'+
-                                '<span class="text">'+ val.titulo +'</span>'+
-                                '<div class="tools">'+
-                                    '<a href="javascript:void(0)" class="edit-item" data-item="'+ val.id +'">'+
-                                        ' <i class="fa fa-edit text-red fa-fw"></i> '+
-                                    '</a>'+
-                                    '<a href="javascript:void(0)" class=" delete-item" data-item="'+ val.id +'">'+
-                                        ' <i class="fa fa-trash-o text-red fa-fw"></i> '+
-                                    '</a>'+
-                                '</div>'+
-                            '</li>';
-                });
-                $("#task-list").html(item);
+                        if (val.status == 0) {
+                            check = 'done';
+                        } else {
+                            check = '';
+                        }
+
+                        item += '<li class="'+ check +'" >'+
+                                    '<span class="handle">'+
+                                        '<i class="fa fa-ellipsis-v"></i> '+
+                                        '<i class="fa fa-ellipsis-v"></i> '+
+                                    '</span>'+
+                                    '<input type="checkbox" value="'+ val.status +'" name="status" class="check-item" data-item="'+ val.id +'">'+
+                                    '<span class="text">'+ val.titulo +'</span>'+
+                                    '<div class="tools">'+
+                                        '<a href="javascript:void(0)" class="edit-item" data-item="'+ val.id +'">'+
+                                            ' <i class="fa fa-edit text-red fa-fw"></i> '+
+                                        '</a>'+
+                                        '<a href="javascript:void(0)" class=" delete-item" data-item="'+ val.id +'">'+
+                                            ' <i class="fa fa-trash-o text-red fa-fw"></i> '+
+                                        '</a>'+
+                                    '</div>'+
+                                '</li>';
+                    });
+                    $("#task-list").html(item);
+
+                } else {
+                    $("#task-list").html('');
+                    return false;
+                }
             },
             error: function(response){
                 return false;
