@@ -23,10 +23,11 @@ class Tasks extends REST_Controller
         if ($id <= 0)
         {
             // Lista as tasks
-        	$tasks = $this->TasksMDL->Get(null, 'id, titulo, status');
+            // Converte a data de modificação
+        	$tasks = $this->TasksMDL->Get(null, "id, titulo, status");
         } else {
             // Lista os dados da tasks conforme o ID solicitado
-        	$tasks = $this->TasksMDL->Get($id);
+        	$tasks = $this->TasksMDL->Get($id, "*, date_format(data_modificacao,'%d/%m/%Y %H:%i:%s') as dt_modificacao, date_format(data_conclusao,'%d/%m/%Y %H:%i:%s') as dt_conclusao");
         }
 
         // verifica se existem tasks e faz o retorno da requisição

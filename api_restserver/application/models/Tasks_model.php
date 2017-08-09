@@ -175,4 +175,5 @@ class Tasks_model extends CI_Model
     		'data_conclusao' => $data_conclusao
 		);
     }
+
 }

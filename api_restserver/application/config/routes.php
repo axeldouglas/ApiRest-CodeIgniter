@@ -70,3 +70,4 @@ $route['translate_uri_dashes'] = TRUE;
 
 $route["api/tasks"]                  = "api/Tasks";
 $route["api/tasks/(:num)"]           = "api/Tasks";
+//$route["api/tasks/reordena"]         = "api/Tasks/reordena";
