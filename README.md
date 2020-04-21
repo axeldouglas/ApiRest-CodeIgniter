@@ -9,7 +9,7 @@ Desenvolvimento de uma aplicação de Tasks utilizando CodeIgniter como RestServ
 _Nota: configurações utilizando PHP 7 apresentam erros_
 
 ## Demo
-* [Task api](http://axel.beecoffee.com.br/)
+* [Task api](http://axeldg.com/lab/task/)
 
 ## Documentação e Fontes
 * [CodeIgniter](https://codeigniter.com/)
